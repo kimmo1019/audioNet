@@ -3,23 +3,23 @@
 
 import os, sys, subprocess
 from flask import Flask, request, redirect, flash
+from flask import render_template
 from werkzeug.utils import secure_filename
 import numpy
 
 sys.path.append('augmentation' + os.sep)
-
-from wavReader import readWav
+from scipy.io import wavfile
 from model import KerasModel
 
 UPLOAD_FOLDER = '.' + os.sep + 'tmp'
-FFMPEG_PATH='.' + os.sep + 'ffmpeg' + os.sep + 'bin' + os.sep + 'ffmpeg'
-MODEL_ID=60
+FFMPEG_PATH='/usr/bin/ffmpeg'
+MODEL_ID=17
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-def predict(wavfile, modelfile):
-    spl, wav = readWav(wavfile)
+def predict(wav_file, modelfile):
+    spl, wav = wavfile.read(wav_file)
     wav = wav.reshape([1, -1, 1, 1])
 
     modelA = KerasModel()
@@ -59,6 +59,12 @@ DICT=[
     '蓝牙还剩多少电量'
     ]
 
+@app.route('/index')
+@app.route('/')
+def index():
+    return render_template('index.html',title='Home')
+    
+
 @app.route('/predict', methods=['GET', 'POST'])
 def predictAction():
     if request.method == 'POST':
@@ -89,17 +95,18 @@ def predictAction():
 
             return str(DICT[res])
 
-    return '''
-    <!doctype html>
-    <title>audioNet Predict</title>
-    <h1>Upload audio for predict</h1>
-    <form action="" method=post enctype=multipart/form-data>
-      <p><input type=file name=file accept='audio/*' capture>
-         <input type=submit value=Upload>
-    </form>
-    '''
+    return render_template('predictAction.html',title='Prediction')
+    #return '''
+    #<!doctype html>
+    #<title>audioNet Predicting</title>
+    #<h1>Upload audio for prediction</h1>
+    #<form action="" method=post enctype=multipart/form-data>
+    #  <p><input type=file name=file accept='audio/*' capture>
+    #     <input type=submit value=Upload>
+    #</form>
+    #'''
 
 if __name__ == "__main__" :
     if not os.path.exists(app.config['UPLOAD_FOLDER']):
         os.makedirs(app.config['UPLOAD_FOLDER'])
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=9000)

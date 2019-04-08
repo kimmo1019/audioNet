@@ -1,4 +1,3 @@
-#!/opt/anaconda3/bin/python
 # -*- coding:utf-8 -*-
 
 import os
@@ -12,11 +11,12 @@ NAME_TO_ID = {
     'h': 12, 'hh': 13, 'i': 14, 'ii': 15, 'iii': 16, 'iiii': 17, 
     'j': 18, 'jj': 19, 'k': 20, 'l': 21, 'll': 22, 'lll': 23}
 
-FFMPEG_COMMAND = FFMPEG_PATH + ' -i %s -ac 1 -acodec pcm_f32le -ar 44100 %s -v 1'
+FFMPEG_COMMAND = 'ffmpeg -i %s -ac 1 -acodec pcm_f32le -ar 44100 %s -v 1'
 
 def ConvertFile(audio, itr, dir_out):
   fname = os.path.basename(audio)
   fname = fname.split('.')
+
   
   if len(fname) != 2:
     return False
@@ -40,6 +40,7 @@ def ConvertAudioToWav(dir_in, dir_out=os.path.join('.', 'data', 'train')):
 
   iter_num = 0
   dirs = os.listdir(dir_in)
+  print("Starting processing audio records from %d users"%len(dirs))
   
   for d in dirs:
     d = os.path.join(dir_in, d)
@@ -53,8 +54,12 @@ def ConvertAudioToWav(dir_in, dir_out=os.path.join('.', 'data', 'train')):
     for audio in audios:
       if ConvertFile(audio, iter_num, dir_out):
         iter_num += 1
+        if iter_num%500==0:
+          print("%d records collected"%iter_num)
+  print("%d records collected in total"%iter_num)
 
   return iter_num
+
 
 if __name__ == '__main__':
     ConvertAudioToWav(sys.argv[1])
