@@ -18,14 +18,14 @@ Early stopping strategy is used.
 modify `webfront.py`, change `MODEL_ID` to yours.
 
 ## Step 3.2 Run `python webfront.py`. 
-open a web browser and input URL:http://127.0.0.1:9000/predict. 
+Open a web browser and input URL:http://IP_ADDRESS:9000. 
 
 ## Step 3.3 You can record a voice directive and upload it for test immediately. 
 
 *It requires `[ffmpeg]`(https://ffmpeg.org/) for audio file format convertion.
 
 ** Select Checkpoint for Evaluation
-modify `webfront.py`, change `MODEL_ID` to yours.
+Modify `webfront.py`, change `MODEL_ID` to yours.
 
 # Step 4. How to deploy your model in mobile? 
 *  Convert model file *.h5 to *.pb file 
