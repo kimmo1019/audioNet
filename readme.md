@@ -29,7 +29,7 @@ modify `webfront.py`, change `MODEL_ID` to yours.
 
 # Step 4. How to deploy your model in Web Server?   
 *  Modify webfront.py, change "MODEL_ID=XX".
-*  start a web server andand input URL: http://127.0.0.1:5000/predict. 
+*  start a web server andand input URL: http://IP_ADDRESS:9000. 
 
 `$ python webfront.py`
 
