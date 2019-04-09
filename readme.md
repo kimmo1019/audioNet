@@ -29,9 +29,9 @@ modify `webfront.py`, change `MODEL_ID` to yours.
 
 # Step 4. How to deploy your model in Web Server?   
 *  Modify webfront.py, change "MODEL_ID=XX".
+`$ python webfront.py`
 *  start a web server andand input URL: http://IP_ADDRESS:9000. 
 
-`$ python webfront.py`
 
 # Step 5. How to deploy your model in mobile? 
 *  Convert model file *.h5 to *.pb file 
