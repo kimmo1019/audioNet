@@ -1,6 +1,6 @@
 # Step 1.  Data preparation
 ## Software dependency
-`bash install.sh` for installing `[ffmpeg](https://ffmpeg.org/)`,`flask`,`unzip`
+Run `bash install.sh` for installing `[ffmpeg](https://ffmpeg.org/)`,`flask`,`unzip`
 ## Data conversion
 'python convert_file.py $data_folder' for uniformly preprocessing data.
 
