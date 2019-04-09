@@ -2,7 +2,7 @@
 ## Software dependency
 Run `bash install.sh` for installing `[ffmpeg]`(https://ffmpeg.org/),`flask`,`unzip`
 ## Data conversion
-'python convert_file.py $data_folder' for uniformly preprocessing data.
+`python convert_file.py $data_folder` for uniformly preprocessing data.
 
 # Step 2. How to train a deep model?
 Just run `python train.py` for model training, note that 10% of the training data will be kept for validation.
