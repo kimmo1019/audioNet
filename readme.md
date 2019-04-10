@@ -1,5 +1,6 @@
 # audioNet
 A deep neural network for audio recognition with online prediction website.
+![](https://github.com/kimmo1019/audioNet/blob/master/audioNet.png)
 
 
 # Requirements
