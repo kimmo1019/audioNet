@@ -4,10 +4,10 @@ A deep neural network for audio recognition with online prediction website.
 
 
 # Requirements
--TensorFlow
--Keras
--flask
--ffmpeg
+- TensorFlow
+- Keras
+- flask
+- ffmpeg
 
 
 
