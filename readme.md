@@ -29,6 +29,7 @@ You should prepare your own data here. In our case, we collected audios of 24 in
 | j    |j:蓝牙音量减小|jj:蓝牙声音减小| | |
 | k    |k:蓝牙关机| | | |
 | l    |l:蓝牙电量提醒|ll:蓝牙还剩多少电|lll:蓝牙还剩多少电量| |
+
 The audio data should be prepared as follows:
 ```
 data\
