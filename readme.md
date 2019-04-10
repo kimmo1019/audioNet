@@ -30,7 +30,7 @@ You should prepare your own data here. In our case, we collected audios of 24 in
 | k    |k:蓝牙关机| | | |
 | l    |l:蓝牙电量提醒|ll:蓝牙还剩多少电|lll:蓝牙还剩多少电量| |
 
-The audio data should be prepared as follows:
+The audio data should be prepared as follows,all the audios are names with their labels. Note that any format (mp3, m4a, webw, wav, etc) of audio is acceptable.
 ```
 data\
      user1\
@@ -44,30 +44,21 @@ data\
      user3\
 ```
 
-`python convert_file.py $data_folder` for uniformly preprocessing data.
+Then run `python convert_file.py $data_folder` for uniformly preprocessing data. The raw audios will be transfromed to `.wav`.
 
-# Step 2. How to train a deep model?
+
+# How to train a deep model?
 Just run `python train.py` for model training, note that 10% of the training data will be kept for validation.
 The weights of model at each epoch will be saved in `models` folder.
 Early stopping strategy is used.
 
-* NOTE: the wav file must be encoded by 16 bit signed integer, mono-channeled and at a sampling rate of 16000.
-
 # Step 3. Predicting with a trained models on a web server
-## Step 3.1 Select Checkpoint for Evaluation
-Modify `webfront.py`, change `MODEL_ID` to yours.
+We use `flask` for establishing a web page for online prediction
+Modify `webfront.py`, change `MODEL_ID` to the number with highest valiation accuracy.
 
-## Step 3.2 Run `python webfront.py`. 
+Then Run `python webfront.py`. 
 Open a web browser and input URL:http://IP_ADDRESS:9000. 
 
 You can record a voice directive and upload it for test immediately. 
 
-*It requires `[ffmpeg]`(https://ffmpeg.org/) for audio file format convertion.
-
-# Step 4. How to deploy your model in mobile? 
-*  Convert model file *.h5 to *.pb file 
-*  Place your *.pb file where you want to deploy.
-*  See Android mobile example: [androidAudioRecg](http://gitlab.icenter.tsinghua.edu.cn/saturnlab/androidAudioRecg)
-
-`$ python ./create_pb.py  XX`
 
