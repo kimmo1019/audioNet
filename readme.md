@@ -41,7 +41,7 @@ raw_data\
                lll.wav
          user2\
          ...
-         user3\
+         userN\
 ```
 
 Then run `python convert_file.py $raw_data` for uniformly preprocessing data. The raw audios will be transfromed to `.wav`.
@@ -61,7 +61,7 @@ We use `flask` framework for quickly establishing a simple web page for online p
 
 Modify `webfront.py`, change `MODEL_ID` to the model index with the highest valiation accuracy.
 
-Then Run `python webfront.py`. 
+Then Run `python webfront.py`. The flask app port is set to 9000.
 
 Open a web browser and input URL:http://IP_ADDRESS:9000. 
 
@@ -70,6 +70,7 @@ You can find some basic instructions for deploying audioNet.
 
 Then, You can record a voice directive and upload it for test immediately. It will return the predictive outcome.
 ![Prediction page](https://github.com/kimmo1019/audioNet/blob/master/ScreenShots/Prediction.png)
+
 
 
 
