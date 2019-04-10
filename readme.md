@@ -12,7 +12,7 @@ It has been tested under a Ubuntu system with TensorFlow==1.10.1, Keras=2.1.4
 
 # Data preparation
 ### Software dependency
-Run `bash install.sh` for installing ![ffmpeg](https://ffmpeg.org/),flask.
+Run `bash install.sh` for installing ffmpeg,flask,Keras.
 ### Data conversion
 You should prepare your own data here. In our case, we collected audios of 24 instructioins ($Label:$Instruction):
 
@@ -32,19 +32,19 @@ You should prepare your own data here. In our case, we collected audios of 24 in
 
 The audio data should be prepared as follows,all the audios are names with their labels. Note that any format (mp3, m4a, webw, wav, etc) of audio is acceptable.
 ```
-data\
-     user1\
-           a.wav
-           b.wav
-           cc.wav
-           ...
-           lll.wav
-     user2\
-     ...
-     user3\
+raw_data\
+         user1\
+               a.wav
+               b.wav
+               cc.wav
+               ...
+               lll.wav
+         user2\
+         ...
+         user3\
 ```
 
-Then run `python convert_file.py $data_folder` for uniformly preprocessing data. The raw audios will be transfromed to `.wav`.
+Then run `python convert_file.py $raw_data` for uniformly preprocessing data. The raw audios will be transfromed to `.wav`.
 
 
 # How to train a deep model?
