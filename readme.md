@@ -17,7 +17,7 @@ Run `bash install.sh` for installing ffmpeg,flask,Keras.
 You should prepare your own data here. In our case, we collected audios of 24 instructioins ($Label:$Instruction):
 
 |Index | Instruction   |       |   |   | 
-| ---- |:-------------:| -----:|--:|--:|
+| ---- |:-------------:| :-----:|:--:|:--:|
 | a    |a:蓝牙开机|  |  |   |
 | b    |b:蓝牙拨打电话| bb:蓝牙打电话|  |  |
 | c    |c:蓝牙接听电话| cc:蓝牙拨打电话| | |
