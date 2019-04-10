@@ -49,16 +49,22 @@ Then run `python convert_file.py $data_folder` for uniformly preprocessing data.
 
 # How to train a deep model?
 Just run `python train.py` for model training, note that 10% of the training data will be kept for validation.
+
 The weights of model at each epoch will be saved in `models` folder.
+
+
 Early stopping strategy is used.
 
-# Step 3. Predicting with a trained models on a web server
-We use `flask` for establishing a web page for online prediction
-Modify `webfront.py`, change `MODEL_ID` to the number with highest valiation accuracy.
+# Predicting with a trained models on a web server
+We use `flask` framework for quickly establishing a web page for online prediction.
+
+Modify `webfront.py`, change `MODEL_ID` to the model index with the highest valiation accuracy.
 
 Then Run `python webfront.py`. 
+
 Open a web browser and input URL:http://IP_ADDRESS:9000. 
 
 You can record a voice directive and upload it for test immediately. 
+
 
 
