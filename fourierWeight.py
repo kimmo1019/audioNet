@@ -29,7 +29,7 @@ def fourierWeight(length, fraction=16.0):
     return sines, cosines
 
 
-
+#fourier tranformation
 def fourierLayer(x):
     sines, cosines = fourierWeight(FLENGTH, 4.0)
     s = K.conv2d(x, sines, (FSTEP, 1))
