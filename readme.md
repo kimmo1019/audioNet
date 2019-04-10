@@ -16,11 +16,11 @@ Run `bash install.sh` for installing ![ffmpeg](https://ffmpeg.org/),flask.
 ### Data conversion
 You should prepare your own data here. In our case, we collected audios of 24 instructioins:
 
-|Tables         | Are           | Cool  |
+|Index          | Instruction   |       | 
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| a             | right-aligned | $1600 |
+| b             | centered      |   $12 |
+| c          | are neat      |    $1 |
 
 `python convert_file.py $data_folder` for uniformly preprocessing data.
 
