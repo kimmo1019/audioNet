@@ -30,7 +30,7 @@ You should prepare your own data here. In our case, we collected audios of 24 in
 | k    |k:蓝牙关机| | | |
 | l    |l:蓝牙电量提醒|ll:蓝牙还剩多少电|lll:蓝牙还剩多少电量| |
 
-The audio data should be prepared as follows,all the audios are names with their labels. Note that any format (mp3, m4a, webw, wav, etc) of audio is acceptable.
+The audio data should be prepared as follows,all the audios are names with their labels. Note that any format (mp3, m4a, webm, wav, etc) of audio is acceptable.
 ```
 raw_data\
          user1\
