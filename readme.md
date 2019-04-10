@@ -14,7 +14,11 @@ It has been tested under a Ubuntu system with TensorFlow==1.10.1, Keras=2.1.4
 ### Software dependency
 Run `bash install.sh` for installing ![ffmpeg](https://ffmpeg.org/),flask.
 ### Data conversion
-
+You should prepare your own data here. In our case, we collected audios of 24 instructioins:
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 `python convert_file.py $data_folder` for uniformly preprocessing data.
 
 # Step 2. How to train a deep model?
