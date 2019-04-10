@@ -1,5 +1,5 @@
 # audioNet
-A deep neural network for audio recognition with online prediction website.
+A deep neural network for Chinese audio recognition with online prediction website.
 ![](https://github.com/kimmo1019/audioNet/blob/master/audioNet.png)
 
 
@@ -16,11 +16,13 @@ Run `bash install.sh` for installing ![ffmpeg](https://ffmpeg.org/),flask.
 ### Data conversion
 You should prepare your own data here. In our case, we collected audios of 24 instructioins:
 
-|Index | Instruction   |       | 
-| ---- |:-------------:| -----:|
-| a    | right-aligned | $1600 |
-| b    | centered      |   $12 |
-| c    | are neat      |    $1 |
+|Index | Instruction   |       |   |   | 
+| ---- |:-------------:| -----:|--:|--:|
+| a    | a:蓝牙开机 |  |  |   |
+| b    | b:蓝牙拨打电话| bb:蓝牙打电话|  |  |
+| c    | c:蓝牙接听电话 | cc:蓝牙拨打电话| | |
+| d    | d:蓝牙拒接 |  |  |  |
+| f    | f:蓝牙暂停音乐|ff:蓝牙停止音乐| | |
 
 `python convert_file.py $data_folder` for uniformly preprocessing data.
 
