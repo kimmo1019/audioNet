@@ -1,5 +1,5 @@
 # audioNet
-A deep neural network for Chinese audio recognition with online prediction website.
+A deep neural network for audio recognition with online prediction website.
 ![](https://github.com/kimmo1019/audioNet/blob/master/audioNet.png)
 
 
@@ -18,11 +18,17 @@ You should prepare your own data here. In our case, we collected audios of 24 in
 
 |Index | Instruction   |       |   |   | 
 | ---- |:-------------:| -----:|--:|--:|
-| a    | a:蓝牙开机 |  |  |   |
-| b    | b:蓝牙拨打电话| bb:蓝牙打电话|  |  |
-| c    | c:蓝牙接听电话 | cc:蓝牙拨打电话| | |
-| d    | d:蓝牙拒接 |  |  |  |
-| f    | f:蓝牙暂停音乐|ff:蓝牙停止音乐| | |
+| a    |a:蓝牙开机|  |  |   |
+| b    |b:蓝牙拨打电话| bb:蓝牙打电话|  |  |
+| c    |c:蓝牙接听电话| cc:蓝牙拨打电话| | |
+| d    |d:蓝牙拒接|  |  |  |
+| f    |f:蓝牙暂停音乐|ff:蓝牙停止音乐| | |
+| g    |g:蓝牙上一首|gg:蓝牙上一曲| | |
+| h    |h:蓝牙下一首|hh:蓝牙下一曲| | |
+| i    |i:蓝牙音量增大|ii:蓝牙声音增大|iii:蓝牙音量增加|iiii:蓝牙声音增加|
+| j    |j:蓝牙音量减小|jj:蓝牙声音减小| | |
+| k    |k:蓝牙关机| | | |
+| l    |l:蓝牙电量提醒|ll:蓝牙还剩多少电|lll:蓝牙还剩多少电量| |
 
 `python convert_file.py $data_folder` for uniformly preprocessing data.
 
