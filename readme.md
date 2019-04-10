@@ -1,6 +1,18 @@
+# audioNet
+A deep neural network for audio recognition with online prediction website.
+
+
+# Requirements
+-TensorFlow
+-Keras
+-flask
+-ffmpeg
+
+
+
 # Step 1.  Data preparation
 ## Software dependency
-Run `bash install.sh` for installing `[ffmpeg]`(https://ffmpeg.org/),`flask`,`unzip`
+Run `bash install.sh` for installing `[ffmpeg]`(https://ffmpeg.org/),flask,unzip
 ## Data conversion
 `python convert_file.py $data_folder` for uniformly preprocessing data.
 
