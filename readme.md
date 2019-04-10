@@ -11,9 +11,9 @@ A deep neural network for audio recognition with online prediction website.
 
 
 
-# Step 1.  Data preparation
+# Data preparation
 ## Software dependency
-Run `bash install.sh` for installing `[ffmpeg]`(https://ffmpeg.org/),flask,unzip
+Run `bash install.sh` for installing ![ffmpeg](https://ffmpeg.org/),flask.
 ## Data conversion
 `python convert_file.py $data_folder` for uniformly preprocessing data.
 
@@ -23,8 +23,6 @@ The weights of model at each epoch will be saved in `models` folder.
 Early stopping strategy is used.
 
 * NOTE: the wav file must be encoded by 16 bit signed integer, mono-channeled and at a sampling rate of 16000.
-* see [audioPlot](http://gitlab.icenter.tsinghua.edu.cn/saturnlab/audioPlot) for converting tools.
-
 
 # Step 3. Predicting with a trained models on a web server
 ## Step 3.1 Select Checkpoint for Evaluation
