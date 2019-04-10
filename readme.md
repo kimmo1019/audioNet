@@ -48,6 +48,7 @@ Then run `python convert_file.py $raw_data` for uniformly preprocessing data. Th
 
 
 # How to train a deep model?
+
 Just run `python train.py` for model training, note that 10% of the training data will be kept for validation.
 
 The weights of model at each epoch will be saved in `models` folder.
