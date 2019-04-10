@@ -11,7 +11,7 @@ sys.path.append('augmentation' + os.sep)
 from scipy.io import wavfile
 from model import KerasModel
 
-UPLOAD_FOLDER = '.' + os.sep + 'tmp'
+UPLOAD_FOLDER = '.' + os.sep + 'upload'
 FFMPEG_PATH='/usr/bin/ffmpeg'
 MODEL_ID=17
 
