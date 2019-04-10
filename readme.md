@@ -65,9 +65,12 @@ Then Run `python webfront.py`.
 
 Open a web browser and input URL:http://IP_ADDRESS:9000. 
 
+You can find some basic instructions for deploying audioNet.
+![Instruction page](https://github.com/kimmo1019/audioNet/blob/master/ScreenShots/Instruction.png)
 
+Then, You can record a voice directive and upload it for test immediately. It will return the predictive outcome.
+![Prediction page](https://github.com/kimmo1019/audioNet/blob/master/ScreenShots/Prediction.png)
 
-You can record a voice directive and upload it for test immediately. 
 
 
 
