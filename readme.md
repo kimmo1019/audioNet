@@ -71,6 +71,9 @@ You can find some basic instructions for deploying audioNet.
 Then, You can record a voice directive and upload it for test immediately. It will return the predictive outcome.
 ![Prediction page](https://github.com/kimmo1019/audioNet/blob/master/ScreenShots/Prediction.png)
 
+# Acknowledgement
+
+This project is suppoorted by Fundamental Industry Training Center in Tsinghua University. Many thanks to Zhen Chen,Wenxun Zheng and Haotian Liu. 
 
 
 
